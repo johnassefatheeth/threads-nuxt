@@ -4,7 +4,7 @@
             <div class="mx-auto max-w-[500px] overflow-hidden">
                 <div id="posts" class="px-4 max-w-[600px] mx-auto">
                     <div class="text-white" v-if="isPosts" v-for="post in posts" :key="post">
-                        {{ post }}
+                        <Post :post="post" @isDeleted="posts=[]"/>
 
                     </div>
 
@@ -20,6 +20,7 @@
 <script setup>
 import MainLayout from '~/layout/MainLayout.vue';
 import { useUserStore } from '~/stores/user';
+import Post from '~/components/post.vue'
 
 const userStore=useUserStore()
 // const user=useSupabaseUser()
