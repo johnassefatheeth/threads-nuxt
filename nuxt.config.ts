@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   pages:true,
   modules:[
     'nuxt-icon',
-    '@nuxTjs/tailwindcss',
-    // '@nuxrjs/supabase',
+    '@nuxtjs/tailwindcss',
+    // '@nuxtjs/supabase',
     '@pinia/nuxt',
     '@vite-pwa/nuxt'
   ],
