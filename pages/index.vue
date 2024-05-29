@@ -45,3 +45,22 @@ onBeforeMount(()=>{
     ]
 })
 </script>
+
+<style scoped>
+#IndexPage::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: transparent;
+}
+
+#IndexPage::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#IndexPage::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#IndexPage::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+</style>
