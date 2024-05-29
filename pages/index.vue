@@ -1,11 +1,12 @@
 <template>
     <MainLayout>
+        
         <div id="IndexPage" class="w-full overflow-auto">
             <div class="mx-auto max-w-[500px] overflow-hidden">
                 <div id="posts" class="px-4 max-w-[600px] mx-auto">
                     <div class="text-white" v-if="isPosts" v-for="post in posts" :key="post">
+                        
                         <Post :post="post" @isDeleted="posts=[]"/>
-
                     </div>
 
                 </div>
@@ -16,11 +17,9 @@
     </MainLayout>
     
 </template>
-
 <script setup>
 import MainLayout from '~/layout/MainLayout.vue';
 import { useUserStore } from '~/stores/user';
-import Post from '~/components/post.vue'
 
 const userStore=useUserStore()
 // const user=useSupabaseUser()
@@ -35,7 +34,7 @@ onBeforeMount(()=>{
         {
             name:'john assefa',
             image:'https://placeholder.co/100',
-            text:'title',
+            text:'title ',
             pic:'https://placeholder.co/500'
         }
     ]
