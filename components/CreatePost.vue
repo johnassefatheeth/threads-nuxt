@@ -37,4 +37,9 @@ const clearData=()=>{
     fileData.value=null
 }
 
+const onChange=()=>{
+    fileDisplay.value=URL.createObjectURL(file.value.files[0])
+    fileData.value=file.value.files[0]
+}
+
 </script>
