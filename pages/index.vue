@@ -1,11 +1,15 @@
 <template>
     <MainLayout>
         
-        <div id="IndexPage" class="w-full overflow-auto">
-            <div class="mx-auto max-w-[500px] overflow-hidden">
+        <div id="IndexPage" class="w-full overflow-auto ">
+            <div class="mx-auto max-w-[500px] overflow-hidden ">
                 <div id="posts" class="px-4 max-w-[600px] mx-auto">
                     <div class="text-white" v-if="isPosts" v-for="post in posts" :key="post">
                         
+                        <Post :post="post" @isDeleted="posts=[]"/>
+                        <Post :post="post" @isDeleted="posts=[]"/>
+                        <Post :post="post" @isDeleted="posts=[]"/>
+                        <Post :post="post" @isDeleted="posts=[]"/>
                         <Post :post="post" @isDeleted="posts=[]"/>
                     </div>
 
@@ -20,6 +24,7 @@
 <script setup>
 import MainLayout from '~/layout/MainLayout.vue';
 import { useUserStore } from '~/stores/user';
+
 
 const userStore=useUserStore()
 // const user=useSupabaseUser()
